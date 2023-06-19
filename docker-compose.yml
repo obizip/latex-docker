@@ -1,0 +1,10 @@
+version: '3'
+services:
+  texlive:
+    build: .docker/texlive
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    user: vscode
+    tty: true
+    volumes:
+      - ./doc:/doc
+      - ./.devcontainer:/doc/.devcontainer

@@ -1,0 +1,192 @@
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{amssymb, amsmath, amsthm, bm, aligned-overset, mathtools, here}
+\usepackage{titlesec, listings, xcolor, tcolorbox}
+\tcbuselibrary{skins}
+
+%%
+%% section style
+%%
+
+\titleformat{\section}% command
+[block]% shape
+{\bfseries\large}% format
+{\thesection}% label
+{3em}% sep
+{}% before-code
+
+%%
+%% box style
+%%
+
+\definecolor{defcolor}{rgb}{0.5, 0.5, 0}
+\newtcolorbox{box:def}{
+    empty, borderline={0pt}{0pt}{white},
+    borderline west={1pt}{1pt}{defcolor}
+}
+\definecolor{excolor}{rgb}{0, 0.7, 0}
+\newtcolorbox{box:ex}{
+    empty, borderline={0pt}{0pt}{white},
+    borderline west={1pt}{1pt}{excolor}
+}
+\definecolor{simcolor}{rgb}{0, 0.7, 0.7}
+\newtcolorbox{box:sim}{
+    empty, borderline={0pt}{0pt}{white},
+    borderline west={1pt}{1pt}{simcolor}
+}
+
+%%
+%% code style
+%%
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single
+}
+\lstset{style=mystyle}
+
+%%
+%% new command and environment
+%%
+
+\newcommand{\Sec}[2]{\section*{#1 \quad #2}}
+\newcommand{\Kadai}[2]{\section*{#1. #2}}
+\newenvironment{Def}[1]{\begin{box:def}\textbf{Definition #1.}}{\end{box:def}}
+\newenvironment{Ex}[1]{\begin{box:ex}\textbf{Excercise #1.}}{\end{box:ex}}
+\newenvironment{Sim}[1]{\begin{box:sim}\textbf{Simulation #1.}}{\end{box:sim}}
+\newenvironment{code}{\leftline{\textit{Code}:}}{}
+\newenvironment{eq}{\begin{equation}\begin{aligned}}{\end{aligned}\end{equation}}
+
+\newcommand{\vA}{\bm{A}}
+\newcommand{\vB}{\bm{B}}
+\newcommand{\vC}{\bm{C}}
+\newcommand{\vD}{\bm{D}}
+\newcommand{\vE}{\bm{E}}
+\newcommand{\vF}{\bm{F}}
+\newcommand{\vG}{\bm{G}}
+\newcommand{\vH}{\bm{H}}
+\newcommand{\vI}{\bm{I}}
+\newcommand{\vJ}{\bm{J}}
+\newcommand{\vK}{\bm{K}}
+\newcommand{\vL}{\bm{L}}
+\newcommand{\vM}{\bm{M}}
+\newcommand{\vN}{\bm{N}}
+\newcommand{\vO}{\bm{O}}
+\newcommand{\vP}{\bm{P}}
+\newcommand{\vQ}{\bm{Q}}
+\newcommand{\vR}{\bm{R}}
+\newcommand{\vS}{\bm{S}}
+\newcommand{\vT}{\bm{T}}
+\newcommand{\vU}{\bm{U}}
+\newcommand{\vV}{\bm{V}}
+\newcommand{\vW}{\bm{W}}
+\newcommand{\vX}{\bm{X}}
+\newcommand{\vY}{\bm{Y}}
+\newcommand{\vZ}{\bm{Z}}
+
+\newcommand{\X}{\bm{X}}
+\newcommand{\Y}{\bm{Y}}
+\newcommand{\Z}{\bm{Z}}
+
+\newcommand{\vGam}{\bm{\Gamma}}
+\newcommand{\vDel}{\bm{\Delta}}
+\newcommand{\vLam}{\bm{\Lambda}}
+\newcommand{\vPhi}{\bm{\Phi}}
+\newcommand{\vPsi}{\bm{\Psi}}
+\newcommand{\vSig}{\bm{\Sigma}}
+\newcommand{\vXi}{\bm{\Xi}}
+\newcommand{\vOmega}{\bm{\Omega}}
+
+\newcommand{\va}{\bm{a}}
+\newcommand{\vb}{\bm{b}}
+\newcommand{\vc}{\bm{c}}
+\newcommand{\vd}{\bm{d}}
+\newcommand{\ve}{\bm{e}}
+\newcommand{\vf}{\bm{f}}
+\newcommand{\vg}{\bm{g}}
+\newcommand{\vh}{\bm{h}}
+\newcommand{\vi}{\bm{i}}
+\newcommand{\vj}{\bm{j}}
+\newcommand{\vk}{\bm{k}}
+\newcommand{\vl}{\bm{l}}
+\newcommand{\vm}{\bm{m}}
+\newcommand{\vn}{\bm{n}}
+\newcommand{\vo}{\bm{o}}
+\newcommand{\vp}{\bm{p}}
+\newcommand{\vq}{\bm{q}}
+\newcommand{\vr}{\bm{r}}
+\newcommand{\vs}{\bm{s}}
+\newcommand{\vt}{\bm{t}}
+\newcommand{\vu}{\bm{u}}
+\newcommand{\vv}{\bm{v}}
+\newcommand{\vw}{\bm{w}}
+\newcommand{\vx}{\bm{x}}
+\newcommand{\vy}{\bm{y}}
+\newcommand{\vz}{\bm{z}}
+
+\newcommand{\x}{\bm{x}}
+\newcommand{\y}{\bm{y}}
+\newcommand{\z}{\bm{z}}
+
+\newcommand{\0}{\bm{0}}
+\newcommand{\1}{\bm{1}}
+
+\newcommand{\valph}{\bm{\alpha}}
+\newcommand{\vbeta}{\bm{\beta}}
+\newcommand{\vgam}{\bm{\gamma}}
+\newcommand{\vdel}{\bm{\delta}}
+\newcommand{\vthet}{\bm{\theta}}
+\newcommand{\veps}{\bm{\epsilon}}
+\newcommand{\veta}{\bm{\eta}}
+\newcommand{\vlam}{\bm{\lambda}}
+\newcommand{\vmu}{\bm{\mu}}
+\newcommand{\vpi}{\bm{\pi}}
+\newcommand{\vphi}{\bm{\phi}}
+\newcommand{\vpsi}{\bm{\psi}}
+\newcommand{\vrho}{\bm{\rho}}
+\newcommand{\vsig}{\bm{\sigma}}
+\newcommand{\vtau}{\bm{\tau}}
+\newcommand{\vxi}{\bm{\xi}}
+\newcommand{\vomega}{\bm{\omega}}
+
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\matnl}[2]{
+    \begin{bmatrix}
+        #1     \\
+        \vdots \\
+        #2     \\
+    \end{bmatrix}
+}
+\newcommand{\matln}[2]{
+    \begin{bmatrix}
+        #1 & \hdots & #2
+    \end{bmatrix}
+}
+\newcommand{\matnn}[4]{
+    \begin{bmatrix}
+        #1     & \hdots & #2     \\
+        \vdots & \ddots & \vdots \\
+        #3     & \hdots & #4     \\
+    \end{bmatrix}
+}
