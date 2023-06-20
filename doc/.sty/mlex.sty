@@ -1,5 +1,4 @@
 \usepackage[dvipdfmx]{graphicx}
-\usepackage[dvipdfmx]{color}
 \usepackage{amssymb, amsmath, amsthm, bm, aligned-overset, mathtools, here}
 \usepackage{titlesec, listings, xcolor, tcolorbox}
 \tcbuselibrary{skins}
@@ -9,11 +8,11 @@
 %%
 
 \titleformat{\section}% command
-[block]% shape
-{\bfseries\large}% format
-{\thesection}% label
-{3em}% sep
-{}% before-code
+    [block]% shape
+    {\bfseries\large}% format
+    {\thesection}% label
+    {3em}% sep
+    {}% before-code
 
 %%
 %% box style
@@ -21,18 +20,18 @@
 
 \definecolor{defcolor}{rgb}{0.5, 0.5, 0}
 \newtcolorbox{box:def}{
-    empty, borderline={0pt}{0pt}{white},
-    borderline west={1pt}{1pt}{defcolor}
+        empty, borderline={0pt}{0pt}{white},
+        borderline west={1pt}{1pt}{defcolor}
 }
 \definecolor{excolor}{rgb}{0, 0.7, 0}
 \newtcolorbox{box:ex}{
-    empty, borderline={0pt}{0pt}{white},
-    borderline west={1pt}{1pt}{excolor}
+        empty, borderline={0pt}{0pt}{white},
+        borderline west={1pt}{1pt}{excolor}
 }
 \definecolor{simcolor}{rgb}{0, 0.7, 0.7}
 \newtcolorbox{box:sim}{
-    empty, borderline={0pt}{0pt}{white},
-    borderline west={1pt}{1pt}{simcolor}
+        empty, borderline={0pt}{0pt}{white},
+        borderline west={1pt}{1pt}{simcolor}
 }
 
 %%
@@ -173,9 +172,9 @@
 \newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\matnl}[2]{
     \begin{bmatrix}
-        #1     \\
+        #1 \\
         \vdots \\
-        #2     \\
+        #2 \\
     \end{bmatrix}
 }
 \newcommand{\matln}[2]{
@@ -185,8 +184,14 @@
 }
 \newcommand{\matnn}[4]{
     \begin{bmatrix}
-        #1     & \hdots & #2     \\
+        #1 & \hdots & #2 \\
         \vdots & \ddots & \vdots \\
-        #3     & \hdots & #4     \\
+        #3 & \hdots & #4 \\
+    \end{bmatrix}
+}
+\newcommand{\vii}[2]{
+    \begin{bmatrix}
+        #1 \\
+        #2 \\
     \end{bmatrix}
 }
