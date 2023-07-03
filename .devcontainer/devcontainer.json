@@ -3,10 +3,20 @@
     "dockerComposeFile": "../docker-compose.yml",
     "service": "texlive",
     "workspaceFolder": "/doc",
-    "postCreateCommand": "ln -snf /doc/.latexmkrc ~/.latexmkrc",
+    "remoteUser": "vscode",
+    "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh",
+    "features": {
+                "ghcr.io/devcontainers/features/python:1": {
+                    "version": "3.11",
+                    "installTools": true
+                }
+    },
     "customizations": {
         "vscode": {
             "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+				"migrs.vimacs",
                 "james-yu.latex-workshop"
             ],
             "settings": {
